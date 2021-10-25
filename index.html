@@ -11,7 +11,13 @@
 	    ul.limitList {
 	    margin-bottom: 10px;
 	    }
-	    ul.limitList li:nth-of-type(1n+6) {
+	    ul.limitList li:nth-of-type(1n+4) {
+	    display: none;
+	    }
+	    ul.limitListShort {
+	    margin-bottom: 10px;
+	    }
+	    ul.limitListShort li:nth-of-type(1n+4) {
 	    display: none;
 	    }
 	  </style>
@@ -32,6 +38,7 @@
 
 		  gtag('config', 'UA-119439808-1');
 		</script>
+		<link rel="shortcut icon" type="image/png" href="favicon.ico">
 	</head>
 	<body>
 
@@ -92,7 +99,7 @@
 									  (<a target="_blank" href="https://www.math.tu-berlin.de/">Institut für Mathematik</a> - <a target="_blank" href="https://www.tu-berlin.de/">Technische Universität Berlin</a>) led by <a target="_blank" href="https://www.math.tu-berlin.de/fachgebiete_ag_diskalg/fachgebiet_algorithmische_algebra/v_menue/members/prof_dr_peter_buergisser/">Peter Bürgisser</a>.
 									</p>
 									<p>
-									  I hold a PhD from
+									  Since June 2019, I hold a PhD from
 									  <a target="_blank" href="https://www.sorbonne-universite.fr/">Sorbonne Université</a>.
 									  My advisors were 
 									  <a target="_blank" href="http://www-polsys.lip6.fr/~jcf/">Jean-Charles Faug&egrave;re</a>
@@ -107,15 +114,31 @@
 							<section id="papers">
 								<div class="container">
 									<h3>Publications</h3>
-									<ul>
-									    <li><strong><a>
+									<ul id="listPublished" class="limitList">
+									  <li><strong><a target="_blank" href="https://doi.org/10.1137/20M1332190">
+										Koszul-type determinantal formulas for families of mixed multilinear systems 
+									    </a></strong>
+									    <br/> Mat&iacute;as R. Bender, Jean-Charles Faug&egrave;re, Angelos Mantzaflaris, and Elias Tsigaridas
+									    <br/>SIAM Journal on Applied Algebra and Geometry, 2021.
+									    <br/><a target="_blank" href="https://arxiv.org/abs/2105.13188">ArXiv version</a>,
+									    <a target="_blank" href="https://mbender.github.io/multLinDetForm/sylvesterMEP.m">MATLAB code</a>
+									  </li>
+									  <li><strong><a target="_blank" href="https://doi.org/10.1007/978-3-030-60327-4_12">
+										 Classifier Construction in Boolean Networks Using Algebraic Methods
+									    </a></strong>
+									    <br/> <a target="_blank" href="https://de.linkedin.com/in/robert-schwieger-431ab4197">Robert Schwieger</a>, Mat&iacute;as R. Bender, <a target="_blank" href="http://page.mi.fu-berlin.de/hsiebert/">Heike Siebert</a>, and <a target="_blank" href="https://www.mi.fu-berlin.de/en/math/groups/ag-diskret-algebra-geom/members/Professoren/christian_haase.html">Christian Haase</a>
+									    <br/> Computational Methods in Systems Biology, Lecture Notes in Computer Science, 2020.
+									    <br/> <a target="_blank" href="etc/classifierBN.pdf">Local version</a>,
+									    <a target="_blank" href="https://github.com/RSchwieger/Classifier-construction-in-Boolean-Networks-using-algebraic-methods/.">Python code</a>
+									  </li>
+									  <li><strong><a target="_blank" href="https://doi.org/10.1016/j.jsc.2020.06.002">
 										A nearly optimal algorithm to decompose binary forms
 									    </a></strong>
-									    <br/> Mat&iacute;as R. Bender, Jean-Charles Faug&egrave;re, <a target="_blank" href="http://www-polsys.lip6.fr/~perret/">Ludovic Perret</a>, and Elias Tsigaridas
-									    <br/> To appear in the Journal of Symbolic Computation.
+									    <br/> Mat&iacute;as R. Bender, Jean-Charles Faug&egrave;re, Ludovic Perret, and Elias Tsigaridas
+									    <br/>Journal of Symbolic Computation, 2021.
 									    <br/><a target="_blank" href="https://hal.inria.fr/hal-01907777/">HAL version</a>
 									  </li>
-									  <li><strong><a target="_blank" href="https://dl.acm.org/citation.cfm?id=3326248">
+									  <li><strong><a target="_blank" href="https://doi.org/10.1145/3326229.3326248">
 										Groebner Basis over Semigroup Algebras: Algorithms and Applications for Sparse Polynomial Systems
 									    </a></strong>
 									    <br/> Mat&iacute;as R. Bender, Jean-Charles Faug&egrave;re, and Elias Tsigaridas
@@ -142,13 +165,31 @@
 									    <a target="_blank" href="https://hal.inria.fr/hal-01363545/">HAL version</a>
 									  </li>
 									</ul>
+									<a onclick="document.getElementById('listPublished').classList.remove('limitList');
+										    this.style.cssText = 'display:none';"
+									   class="button special small" style="margin-left:30px;margin-top:0px;margin-bottom:10px;">
+									  (See all)
+									</a>
 									<h4>Preprints</h4>
 									<ul>
 									  <li><strong><a>
-										Determinantal formulas for families of mixed multilinear systems
+										Efficient computation of multiparameter persistence
 									    </a></strong>
-									    <br/> Mat&iacute;as R. Bender, Jean-Charles Faug&egrave;re, <a target="_blank" href="http://www.angelos-m.info/">Angelos Mantzaflaris</a>, and Elias Tsigaridas
-									    <br/> In preparation, <em>July 2019</em>.  (36 pages)
+									    <br/> Mat&iacute;as R. Bender, <a target="_blank" href="https://people.kth.se/~oliverg/">Oliver G&auml;fvert</a>, and <a target="_blank" href="https://www.albany.edu/~ml644186/">Michael Lesnick</a>
+									    <br/> In preparation, <em>May 2021</em>.  (48 pages)
+									  </li>
+									  <li><strong><a target="_blank" href="https://arxiv.org/abs/2105.08472">
+										Yet another eigenvalue algorithm for solving polynomial systems
+									    </a></strong>
+									    <br/> Mat&iacute;as R. Bender and Simon Telen
+									    <br/> Submitted, <em>May 2021</em>.  (28 pages)
+									    <br/> Julia package <a target="_blank" href="https://github.com/simontelen/JuliaEigenvalueSolver"><em>EigenvalueSolver.jl</em></a>
+									  </li>
+									  <li><strong><a target="_blank" href="https://arxiv.org/abs/2006.10654">
+										Toric Eigenvalue Methods for Solving Sparse Polynomial Systems
+									    </a></strong>
+									    <br/> Mat&iacute;as R. Bender and <a target="_blank" href="https://simontelen.webnode.com/">Simon Telen</a>
+									    <br/> Submitted, <em>March 2021</em>.  (27 pages)
 									  </li>
 									</ul>
 								</div>
@@ -159,7 +200,51 @@
 							<section id="talks">
 								<div class="container">
 								  <h3>Talks</h3>						
-								  <ul id="listTalks" class="limitList">
+								  <ul id="listTalks" class="limitListShort">
+								    <li><strong>Toric Eigenvalue Methods for Solving Sparse Polynomial Systems</strong>
+								      <br/>
+								      Mini-symposium
+								      <a>New Trends in Polynomial System Solving</a> 
+								      <br/>
+								      <a target="_blank" href="https://www.siam.org/conferences/cm/conference/ag21">SIAM Conference on Applied Algebraic Geometry</a>
+								      <br/>
+								      Online, August 2021.
+								    </li>
+								    <li><strong>Koszul-type determinantal formulas for families of mixed multilinear systems</strong>
+								      <br/><a target="_blank" href="https://www.mis.mpg.de/calendar/lectures/2021/abstract-32481.html">Seminar on Non-Linear Algebra</a>
+								      <br/>
+								      MPI für Mathematik in den Naturwissenschaften, Leipzig, Germany, August 2021.
+								    </li>
+								    <li><strong>Toric Eigenvalue Methods for Solving Sparse Polynomial Systems</strong>
+								      <br/><a target="_blank" href="http://www.iaa.tu-bs.de/AppliedAlgebra/AAA/abstracts_SoSe2021.html#23.04">
+									 Applied Algebra and Analysis Online Seminar</a>
+								      <br/>
+								      (Online) TU Braunschweig and University of Osnabrueck, Germany, April 2021.
+								    </li>
+  								    <li><strong>Toric Eigenvalue Methods for Solving Sparse Polynomial Systems</strong>
+								      <br/><a target="_blank" href="https://conferences.cirm-math.fr/2564.html">
+									Journ&eacute;es Nationales de Calcul Formel 2021</a>
+								      <br/>
+								      (Online) CIRM, Luminy, France, March 2021
+								      <br/>
+								      <a target="_blank" href="https://www.youtube.com/watch?v=rdRokgURuyQ">Video</a>,
+								      <a target="_blank" href="https://www.cirm-math.fr/RepOrga/2564/Slides/2a_benderJNCF.pdf">Slides</a>.  
+								    </li>
+								    <li><strong>Toric Eigenvalue Methods for Solving Sparse Polynomial Systems</strong>
+								      <br/><a target="_blank" href="https://team.inria.fr/aromath/seminars/?yr=2020&month=11">AROMATH team's seminar</a>
+								      <br/>
+								      (Online) INRIA, Sophia Antipolis, France, December 2020
+								    </li>
+								    <li><strong>Gröbner bases and sparse polynomial systems</strong>
+								      <br/><a target="_blank" href="http://www.math.rwth-aachen.de/~levandov/icms2020/">Session: Gröbner Bases in Theory and Practice</a>
+								      <br/>
+								      (Online) International Congress on Mathematical Software 2020, July 2020. 
+								    </li>
+								    <li><strong>Toric Eigenvalue Methods for Solving Sparse Polynomial Systems</strong>
+								      <br/><a target="_blank" href="https://www.math.tu-berlin.de/fachgebiete_ag_diskalg/fachgebiet_algorithmische_algebra/v_menue/veranstaltungen/2020ss/kolloquium_oberseminar/">Kolloquium on Algorithmic Algebra at TU Berlin</a>
+								      <br/>
+								      (Online) Technische Universität Berlin, Berlin, Germany, July 2020. 
+								    </li>
 								    <li><strong> Solving sparse polynomial systems by computing Gröbner bases faster</strong>
 								      <br/><a target="_blank" href="https://www.mis.mpg.de/de/veranstaltungen/vortraege/2020/vortrag-31420.html">Seminar on Non-Linear Algebra</a>
 								      <br/>
@@ -170,7 +255,7 @@
 								      <br/>
 								      Otto-von-Guericke-Universität Magdeburg, Magdeburg, Germany, January 2020
 								    </li>
-								    <li><strong>Algorithms for sparse polynomial systems: Gröbner bases and resultantss</strong>
+								    <li><strong>Algorithms for sparse polynomial systems: Gröbner bases and resultants</strong>
 								      <br/><a target="_blank" href="https://www.math.tu-berlin.de/fachgebiete_ag_diskalg/fachgebiet_algorithmische_algebra/v_menue/veranstaltungen/2019ws/kolloquium_oberseminar/">Kolloquium on Algorithmic Algebra at TU Berlin</a>
 								      <br/>
 								      Technische Universität Berlin, Berlin, Germany, October 2019
@@ -210,12 +295,12 @@
 								    <li><strong>Solving sparse polynomial systems using Groebner bases</strong>
 								      <br/><a target="_blank" href="https://caramba.loria.fr/seminars.en.html">CARAMBA team's seminar</a>
 								      <br/>
-								      Institut National de Recherche en Informatique et en Automatique, Nancy, France, April 2019
+								      INRIA, Nancy, France, April 2019
 								    </li>
 								    <li><strong>Solving Polynomial Systems</strong>
 								      <br/><a>Inria's Junior Seminar</a>
 								      <br/>
-								      Institut National de Recherche en Informatique et en Automatique, Paris, France, February 2019
+								      INRIA, Paris, France, February 2019
 								    </li>
 								    <li><strong>Solving sparse polynomial systems using Groebner bases</strong>
 								      <br/><a target="_blank" href="http://www.facetsofcomplexity.de/monday/20190211-C-Bender.html">Facets of Complexity Seminar</a>
@@ -251,7 +336,7 @@
 									  <br/>XLIM-DMI, Universit&eacute; de Limoges, Limoges, France, 9-10 May 2016
 	                                                    		</li>
 								  </ul>
-								  <a onclick="document.getElementById('listTalks').classList.remove('limitList');
+								  <a onclick="document.getElementById('listTalks').classList.remove('limitListShort');
 									      this.style.cssText = 'display:none';"
 								     class="button special small" style="margin-left:30px;margin-top:0px;margin-bottom:10px;">
 								    (See all)
@@ -313,7 +398,7 @@
 							<section id="grants">
 								<div class="container">
 									  <h3>Awards and Grants</h3>
-									  <ul>
+									  <ul id="listAwards" class="limitListShort">
 									    <li><strong>SIAM Early Career Travel Award</strong> to attend
 									      <a target="_blank" href="https://www.siam.org/conferences/CM/Main/ag19">
 										SIAM Conference on Applied Algebraic Geometry
@@ -337,7 +422,11 @@
 									      Under the supervision of <a target="_blank" href="http://www-2.dc.uba.ar/profesores/feuerstein/">Esteban Feuerstein</a>.
 									    </li>
 									  </ul>  
-
+									<a onclick="document.getElementById('listAwards').classList.remove('limitListShort');
+										    this.style.cssText = 'display:none';"
+									   class="button special small" style="margin-left:30px;margin-top:0px;margin-bottom:10px;">
+									  (See all)
+									</a>
 								</div>
 							</section>
 
@@ -352,14 +441,18 @@
 									    <li>
 									      <strong>Teaching Assistant</strong>, Computer Science Department, University of Buenos Aires.
 									      <em>March 2012 - February 2014</em>
+									      <br/>
 									      TA at Algorithms &amp; Data Structures II, two semesters in 2012 and one in 2013. Topics include formal specification using ADTs,
 									      Software Design, Data Structures, Sorting Algorithms, Divide and Conquer techniques, Complexity Order calculations.
-									      Implementations with C++.  TA at Algorithms &amp; Data Structures III, one semester in 2013.
+									      Implementations with C++.
+									      <br/>
+									      TA at Algorithms &amp; Data Structures III, one semester in 2013.
 									      Topics include Graph Theory, Complexity Theory (P and NP), Dynamic Programming and Backtracking techniques.
 									    </li>
 									    <li>
 									      <strong>Informatics Teacher</strong>, Escuela Integral Hebrea Natan Gesang, (primary school).
 									      <em>April 2010 - January 2012</em>
+									      <br/>
 									      Computer teacher for kids from six to eight years. Topics include different OSs, basic ofimatics,
 									      web design (DreamWeaver) and elementary programming (Scratch).
 									    </li>
@@ -927,7 +1020,7 @@
 						<div class="container">
 							<ul class="copyright">
 							<li>
-							Last modified on 29 January 2020
+							Last modified on 19 August 2021
 							</li>
 								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
